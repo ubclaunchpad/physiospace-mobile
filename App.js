@@ -7,13 +7,18 @@
  */
 
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {NativeRouter, Route, Switch} from 'react-router-native';
+import Home from './src/screens/Home/Home.js';
 
 const App: () => React$Node = () => {
   return (
-    <View>
-      <Text>hello</Text>
-    </View>
+    <NativeRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        {/* <Route path="/exercise/:workoutType" component={Exercise} />
+        <Route path="/workout/:workoutType" component={Workout} /> */}
+      </Switch>
+    </NativeRouter>
   );
 };
 
